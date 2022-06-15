@@ -63,7 +63,6 @@ def zacznij_gre():
 
 
 def wybierz_kategorie():
-    import datetime
     print('\nDostępne kategorie:\n[1] zwierzęta\n[2] astronomia\n[3] sport\n\n[0] Powrót do menu')
     kategoria = input('Wpisz liczbę: ')
     while not kategoria.isdecimal():
@@ -109,7 +108,6 @@ def losowanie(jezyk, kategoria):
          'deskorolka', 'dogrywka', 'futbol', 'drybling', 'falstart', 'gimnastyka', 'golf', 'hokej', 'hipodrom', 'boks',
          'jeździectwo', 'kajakarstwo', 'łyżwiarstwo', 'narciarstwo', 'nokaut', 'olimpiada', 'piruet', 'pilates']]
         slowo = random.choice(kategorie[kategoria]).upper()
-        wybierz_trudnosc(slowo)
 
     elif jezyk == 2:
         kategorie = [
@@ -119,7 +117,6 @@ def losowanie(jezyk, kategoria):
 
         ['acrobatics', 'basketball', 'volleyball', 'swimming', 'canoeing', 'gymnastics']]
         slowo = random.choice(kategorie[kategoria]).upper()
-        wybierz_trudnosc(slowo)
 
     elif jezyk == 3:
         kategorie = [
@@ -129,7 +126,8 @@ def losowanie(jezyk, kategoria):
 
         ['acrobaties', 'natation', 'gymnastique', 'tennis', 'golf', 'pirouette', 'hockey']]
         slowo = random.choice(kategorie[kategoria]).upper()
-        wybierz_trudnosc(slowo)
+
+    wybierz_trudnosc(slowo)
 
 
 def wybierz_trudnosc(slowo):
@@ -143,21 +141,21 @@ def wybierz_trudnosc(slowo):
     if trudnosc == 1:
         pozostale_proby = 10
         podpowiedz = 2
-        gra(slowo, pozostale_proby, podpowiedz)
     elif trudnosc == 2:
         pozostale_proby = 8
         podpowiedz = 1
-        gra(slowo, pozostale_proby, podpowiedz)
     elif trudnosc == 3:
         pozostale_proby = 5
         podpowiedz = 0
-        gra(slowo, pozostale_proby, podpowiedz)
     else:
         menu()
+
+    gra(slowo, pozostale_proby, podpowiedz)
 
 
 def gra(slowo, pozostale_proby, podpowiedz):
     import random
+    print(slowo)
     postep_gry = '_' * len(slowo)
     podane_litery = []
     czy_wygrana = False
