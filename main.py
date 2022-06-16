@@ -155,7 +155,6 @@ def wybierz_trudnosc(slowo):
 
 def gra(slowo, pozostale_proby, podpowiedz):
     import random
-    print(slowo)
     postep_gry = '_' * len(slowo)
     podane_litery = []
     czy_wygrana = False
