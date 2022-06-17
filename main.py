@@ -214,7 +214,7 @@ def gra(slowo, pozostale_proby, podpowiedz):
                 wisielec(pozostale_proby)
                 pozostale_proby -= 1
         else:
-            print('Niepoprawne dane, spróbuj ponownie.')
+            print('\nNiepoprawne dane, spróbuj ponownie.')
     if pozostale_proby == 0:
         print('\nNiestety, tym razem przegrałeś. Poprawna odpowiedź to ', slowo, '.', sep='')
         zmiana_statystyk(czy_wygrana)
